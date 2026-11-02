@@ -9,20 +9,17 @@ import 'presentation/bloc/login_bloc.dart';
 import 'presentation/pages/login_page.dart';
 
 void main() {
-  // 1. Create the data source
+
   final remoteDataSource = AuthRemoteDataSource();
 
-  // 2. Create the repository implementation
-  //    and inject the data source into it.
   final AuthRepository authRepository = AuthRepositoryImpl(
     remoteDataSource: remoteDataSource,
   );
 
-  // 3. Create the use case
-  //    and inject the repository into it.
+
   final loginUseCase = LoginUseCase(authRepository);
 
-  // 4. Provide the BLoC to the UI.
+
   runApp(
     MyApp(loginUseCase: loginUseCase),
   );
