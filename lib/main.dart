@@ -1,3 +1,4 @@
+import 'package:clean/presentation/pages/debounce_example.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -41,7 +42,8 @@ class MyApp extends StatelessWidget {
         create: (_) => LoginBloc(
           loginUseCase: loginUseCase,
         ),
-        child: const LoginPage(),
+       // child: const LoginPage(),
+        child: const SearchPage(),
       ),
     );
   }
